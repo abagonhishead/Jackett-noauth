@@ -1,7 +1,8 @@
 # Jackett
 # IMPORTANT
-This is a fork of Jackett/Jackett that disable authentication completely. __Do not use it if you do not know what you are doing.__ It is designed solely to be operated in a container, isolated from any inbound connections.
+### This is a fork of Jackett/Jackett that disable authentication completely. It is designed solely to be operated in a container, isolated from any inbound connections. __Do not use it if you do not know what you are doing.__
 
+____
 This project is a new fork and is recruiting development help.  If you can help out please [contact us](https://github.com/Jackett/Jackett/issues/8180).
 
 Please see our [troubleshooting and contributing guidelines](CONTRIBUTING.md) before submitting any issues or pull requests
