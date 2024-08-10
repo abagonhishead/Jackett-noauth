@@ -45,30 +45,14 @@ namespace Jackett.Server
                         {
                             options.AddPolicy(name: AllowAllOrigins, corsPolicyBuilder => corsPolicyBuilder.AllowAnyOrigin());
 
-                        })
-                    .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme,
-                        options =>
-                        {
-                            options.LoginPath = new PathString("/UI/Login");
-                            options.AccessDeniedPath = new PathString("/UI/Login");
-                            options.LogoutPath = new PathString("/UI/Logout");
-                            options.Cookie.Name = "Jackett";
                         });
-
 #if NET462
-            services.AddMvc(
-                        config => config.Filters.Add(
-                            new AuthorizeFilter(
-                                new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build())))
+            services.AddMvc()
                     .AddJsonOptions(options => options.SerializerSettings.ContractResolver =
                                         new DefaultContractResolver()); //Web app uses Pascal Case JSON);
 #else
 
-            services.AddControllers(
-                        config => config.Filters.Add(
-                            new AuthorizeFilter(
-                                new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build())))
+            services.AddControllers()
                     .AddNewtonsoftJson(
                         options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
 #endif
@@ -144,8 +128,6 @@ namespace Jackett.Server
 
             app.UseStaticFiles();
 
-            app.UseAuthentication();
-
             if (Helper.ServerConfiguration.AllowCORS)
                 app.UseCors(AllowAllOrigins);
 
@@ -186,8 +168,6 @@ namespace Jackett.Server
             app.UseRewriter(rewriteOptions);
 
             app.UseStaticFiles();
-
-            app.UseAuthentication();
 
             app.UseRouting();
 
