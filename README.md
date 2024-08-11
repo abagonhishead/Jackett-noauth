@@ -1,6 +1,6 @@
 # Jackett-noauth
 # IMPORTANT
-### This is a fork of [Jackett/Jackett](https://github.com/Jackett/Jackett) that disables cookie authentication. 
+### This is a fork of [Jackett](https://github.com/Jackett/Jackett) that disables cookie authentication. 
 
 ### It is designed to be operated in a container without any UI access and with no inbound connections from the Internet, e.g. as an API to be called by other APIs.
 
@@ -17,6 +17,8 @@ This fork only supports Docker on Linux. Docker images can be found [here](https
 
 Currently only an amd64 build is provided, but arm64/armv7 support will be added in the near future (if .NET 8 supports building Jackett against them.)
 
-Jackett will use the path `/config` for its configuration by default.
+This image will use the path `/config` for Jackett's configuration by default. You can change this by setting the `XDG_CONFIG_HOME` environment variable.
 
 If you want to build & run the image yourself, basic scripts are provided at `docker-run.sh` and `docker-run.ps1` in the repo, depending on your shell of choice.
+
+For other configuration options, see [Jackett](https://github.com/Jackett/Jackett).
