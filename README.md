@@ -4,6 +4,6 @@
 
 ## __Do not use it if you do not know what you are doing.__
 
-Linux amd64 docker images can be found [here](https://hub.docker.com/r/abagonhishead/jackett-noauth).
+Linux amd64 docker images can be found [here](https://hub.docker.com/r/abagonhishead/jackett-noauth) or by running `docker pull abagonhishead/jackett-noauth:latest`.
 
 TODO: arm64/armv7/armv6?
