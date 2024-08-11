@@ -10,6 +10,9 @@
     <DefineConstants Condition="'$(RuntimeIdentifier)' == 'linux-musl-x64' or '$(RuntimeIdentifier)' == 'linux-musl-arm' or '$(RuntimeIdentifier)' == 'linux-musl-arm64'">ISLINUXMUSL</DefineConstants>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <UserSecretsId>27ceb75e-9deb-4bd9-b483-ac36c466aa7e</UserSecretsId>
+    <DockerfileContext>..</DockerfileContext>
+    <DockerfileFile>Dockerfile</DockerfileFile>
+    <DockerfileTag>jackett-noauth</DockerfileTag>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0|AnyCPU'">

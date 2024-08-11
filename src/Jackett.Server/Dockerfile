@@ -8,13 +8,13 @@ EXPOSE 9117
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Directory.Build.props", "."]
-COPY ["Jackett.Server/Jackett.Server.csproj", "Jackett.Server/"]
-COPY ["Jackett.Common/Jackett.Common.csproj", "Jackett.Common/"]
-COPY ["DateTimeRoutines/DateTimeRoutines.csproj", "DateTimeRoutines/"]
-RUN dotnet restore "./Jackett.Server/Jackett.Server.csproj"
+#COPY ["Directory.Build.props", "."]
+COPY ["src/Jackett.Server/Jackett.Server.csproj", "src/Jackett.Server/"]
+#COPY ["Jackett.Common/Jackett.Common.csproj", "Jackett.Common/"]
+#COPY ["DateTimeRoutines/DateTimeRoutines.csproj", "DateTimeRoutines/"]
+RUN dotnet restore "./src/Jackett.Server/Jackett.Server.csproj"
 COPY . .
-WORKDIR "/src/Jackett.Server"
+WORKDIR "./src/Jackett.Server"
 RUN dotnet build "./Jackett.Server.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
