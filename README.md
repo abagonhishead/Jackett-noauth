@@ -11,8 +11,6 @@ By default, calling the non-Torznab APIs from an external consumer is difficult 
 
 Torznab APIs should be unaffected and will still require an API key.
 
-___
-
 # Using it
 
 This fork only supports Docker on Linux. Docker images can be found [here](https://hub.docker.com/r/abagonhishead/jackett-noauth) or by running `docker pull abagonhishead/jackett-noauth:latest`.
