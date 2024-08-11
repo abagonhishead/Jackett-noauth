@@ -21,7 +21,7 @@ Currently only an amd64 build is provided, but arm64/armv7 support will be added
 This image will use the path `/config` for Jackett's configuration by default. You can change this by setting the `XDG_CONFIG_HOME` environment variable.
 
 If you are running the container on *nix and mounting a directory on the host onto `/config` as a docker volume, then you will need to `chown` it to the appropriate user ID on the host.  
-For images based on the ASP.NET 8 base image, the user ID appears to be `1654`, for example:
+For this image the user ID appears to be `1654`, for example:
 ```bash
 mkdir -p /path/to/my/config/volume
 chown -Rv 1654:1654 /path/to/my/config/volume
