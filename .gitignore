@@ -197,7 +197,6 @@ FakesAssemblies/
 /tools
 *.DS_Store
 .idea/
-launchSettings.json
 
 # JetBrains Rider
 /src/.run

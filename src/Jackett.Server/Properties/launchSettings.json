@@ -1,0 +1,22 @@
+{
+  "profiles": {
+    "Jackett.Server": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:46045;http://localhost:46046"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "environmentVariables": {
+        "ASPNETCORE_HTTP_PORTS": "9117"
+      },
+      "publishAllPorts": true,
+      "useSSL": false
+    }
+  }
+}
