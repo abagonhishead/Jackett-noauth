@@ -19,6 +19,9 @@ Currently only an amd64 build is provided, but arm64/armv7 support will be added
 
 This image will use the path `/config` for Jackett's configuration by default. You can change this by setting the `XDG_CONFIG_HOME` environment variable.
 
+If you are running the container on *nix and mounting a directory on the host onto `/config` as a docker volume, then you will need to chown it to the appropriate user ID on the host. For images based on the ASP.NET 8 base image, this appears to be `1654`. e.g.
+`mkdir -p /path/to/my/config/volume && chown -Rv 1654:1654 /path/to/my/config/volume && chmod -Rv 0755 /path/to/my/config/volume`
+
 If you want to build & run the image yourself, basic scripts are provided at `docker-run.sh` and `docker-run.ps1` in the repo, depending on your shell of choice.
 
 For other configuration options, see [Jackett](https://github.com/Jackett/Jackett).
