@@ -7,7 +7,8 @@
 ## __Do not use it if you do not know what you are doing. Opening it up to the Internet is insecure.__
 
 # Why
-By default, calling the non-Torznab APIs from an external consumer is difficult because of the way Microsoft's cookie authentication works. This fork fixes that by disabling cookie authentication, which means the UI has no authentication.
+By default, calling the non-Torznab APIs from an external consumer is difficult because of the way Microsoft's cookie authentication works. This fork fixes that by disabling cookie authentication.  
+This has the side-effect of removing all authentication from the UI, which is why it should never be opened up to the Internet.
 
 Torznab APIs should be unaffected and will still require an API key.
 
