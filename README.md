@@ -14,7 +14,7 @@ Torznab APIs should be unaffected and will still require an API key.
 
 # Using it
 
-This fork only supports Docker on Linux. Docker images can be found [here](https://hub.docker.com/r/abagonhishead/jackett-noauth) or by running `docker pull abagonhishead/jackett-noauth:latest`.
+This fork only supports Docker images running Linux. Docker images can be found [here](https://hub.docker.com/r/abagonhishead/jackett-noauth) or by running `docker pull abagonhishead/jackett-noauth:latest`.
 
 Currently only an amd64 build is provided, but arm64/armv7 support will be added in the near future (if .NET 8 supports building Jackett against them.)
 
