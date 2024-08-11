@@ -17,4 +17,6 @@ This fork only supports Docker on Linux. Docker images can be found [here](https
 
 Currently only an amd64 build is provided, but arm64/armv7 support will be added in the near future (if .NET 8 supports building Jackett against them.)
 
+Jackett will use the path `/config` for its configuration by default.
+
 If you want to build & run the image yourself, basic scripts are provided at `docker-run.sh` and `docker-run.ps1` in the repo, depending on your shell of choice.
